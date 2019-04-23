@@ -105,7 +105,10 @@ section {
   display: block;
 }
 body {
-  line-height: 1;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.65;
 }
 ol,
 ul {
@@ -133,4 +136,58 @@ table {
 html,
 body {
   height: 100%;
+}
+.container {
+  width: 900px;
+  margin: auto;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav a {
+  margin: 25px 0 25px 0;
+  padding: 1rem 0 1rem 2rem;
+  text-decoration: none;
+}
+.heading-img {
+  width: 45%;
+  margin: 5% 0 0 3%;
+}
+.main-content {
+  align-content: flex-end;
+  margin-left: 3%;
+}
+.overview .heading {
+  font-size: 50px;
+  align-content: flex-end;
+}
+.content {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  background-color: #eceaea;
+  padding: 1rem;
+}
+p.top-text {
+  border-bottom: 1px solid gray;
+  padding-bottom: 1rem;
+  width: 98%;
+}
+p.bottom-text {
+  padding-bottom: 1rem;
+  width: 90%;
+}
+.main-content button {
+  background: dodgerblue;
+  border: 1px solid #e9e8e8;
+  border-radius: 4px;
+  background-color: #a09e9e;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 20px;
+  text-align: center;
+}
+.main-content button:hover {
+  background-color: dodgerblue;
+  color: white;
 }
