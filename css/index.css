@@ -130,6 +130,9 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+.padding {
+  padding: 1rem 0 1rem 2rem;
+}
 * {
   box-sizing: border-box;
 }
@@ -160,15 +163,10 @@ header a {
     justify-content: center;
   }
   header nav a {
-    margin-left: 0;
+    margin: 25px 0 25px 0;
     padding: 1rem 0 1rem 2rem;
     text-decoration: none;
   }
-}
-header nav a {
-  margin: 25px 0 25px 0;
-  padding: 1rem 0 1rem 2rem;
-  text-decoration: none;
 }
 .heading-img {
   width: 45%;
@@ -178,7 +176,7 @@ header nav a {
   align-content: flex-end;
   margin-left: 3%;
 }
-@media (max-width: 515px) {
+@media (max-width: 500px) {
   .main-content {
     width: 100%;
   }
@@ -193,18 +191,18 @@ header nav a {
   background-color: #eceaea;
   padding: 1rem;
 }
-p.top-text {
-  border-bottom: 1px solid gray;
+.content p.top-text {
+  border-bottom: 1px solid #a09e9e;
   padding-bottom: 1rem;
   width: 98%;
 }
-p.bottom-text {
+.content p.bottom-text {
   padding-bottom: 1rem;
   width: 90%;
 }
 .main-content button {
   background: dodgerblue;
-  border: 1px solid #e9e8e8;
+  border: 100% solid #e9e8e8;
   border-radius: 5px;
   background-color: #a09e9e;
   cursor: pointer;
@@ -212,42 +210,20 @@ p.bottom-text {
   font-size: 20px;
   text-align: center;
 }
-@media (max-width: 600px) {
-  .main-content button {
-    width: 75%;
-    font-size: 2.5rem;
-  }
-}
-@media (max-width: 600px) {
-  .main-content button {
-    background: green;
-    color: white;
-  }
-}
 .main-content button:hover {
   background-color: dodgerblue;
   color: white;
 }
-@media (max-width: 600px) {
-  .middle-content .text-content h2 {
-    font-size: 30px;
+@media (max-width: 500px) {
+  .main-content button {
+    width: 40%;
+    font-size: 1rem;
+    background: #a09e9e;
+    color: white;
   }
-  .middle-content {
-    display: flex;
+  .main-content button:hover {
+    background-color: dodgerblue;
   }
-  .text-content {
-    width: 55%;
-    padding: 1rem 1rem 1rem 0;
-  }
-  .middle-content .text-content p {
-    width: 100%;
-  }
-  .middle-content .text-content h2 {
-    font-size: 25px;
-  }
-}
-.middle-content .text-content h2 {
-  font-size: 30px;
 }
 .middle-content {
   display: flex;
@@ -262,7 +238,7 @@ p.bottom-text {
 .middle-content .text-content h2 {
   font-size: 25px;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .middle-content .text-content-bottom {
     width: 50%;
     float: left;
@@ -273,7 +249,7 @@ p.bottom-text {
   }
   .middle-content .text-content-bottom p {
     padding: 1rem;
-    border: 1px solid black;
+    border: 100% solid black;
   }
   .bottom-content h2 {
     font-size: 25px;
@@ -294,7 +270,7 @@ p.bottom-text {
 .bottom-content h2 {
   font-size: 25px;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -302,12 +278,12 @@ p.bottom-text {
   }
   td,
   th {
-    border: 1px solid none;
+    border: 100% solid none;
     text-align: left;
     padding: 8px;
   }
   tr:nth-child(odd) {
-    background-color: #dddddd;
+    background-color: #a09e9e;
   }
 }
 table {
@@ -317,7 +293,7 @@ table {
 }
 td,
 th {
-  border: 1px solid none;
+  border: 100% solid none;
   text-align: left;
   padding: 8px;
 }
@@ -327,7 +303,7 @@ tr:nth-child(odd) {
 footer {
   margin-top: 3rem;
   text-align: center;
-  border: 1px solid black;
+  border: 100% solid black;
   background: black;
   color: white;
   padding: 2rem;

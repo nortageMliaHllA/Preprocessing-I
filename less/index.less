@@ -52,7 +52,15 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
+@color: dodgerblue;
+@bckgrd: rgb(160, 158, 158);
+@font-size: 25px;
+@width: 100%;
+.padding {
+	padding: 1rem 0 1rem 2rem;
+}
+
+;* {
     box-sizing: border-box;
 }
 
@@ -78,27 +86,22 @@ header {
 }
 	a {
 		margin-left: 0;
-		padding: 1rem 0 1rem 2rem;
+		.padding();
 		text-decoration: none;
 	}
 }
 
-@media( max-width: 600px ) {
+@media( max-width: 600px) {
 	header nav {
 	  justify-content: center;
 	}
 	header nav a {
-		margin-left: 0;
-		padding: 1rem 0 1rem 2rem;
+		margin: 25px 0 25px 0;
+		.padding();
 		text-decoration: none;
 	}
   }
 
-header nav a {
-	margin: 25px 0 25px 0;
-	padding: 1rem 0 1rem 2rem;
-	text-decoration: none;
-}
 
 .heading-img {
 	width: 45%;
@@ -110,7 +113,7 @@ header nav a {
 	margin-left: 3%;
 }
 
-@media( max-width: 515px ) {
+@media( max-width: 500px ) {
 	.main-content {
 	  width: 100%;
 	}
@@ -122,98 +125,70 @@ header nav a {
 }
 
 .content {
-	border: 1px solid white;
-	border-radius: 0.5rem;
-	background-color: rgb(236, 234, 234);
-	padding: 1rem;
+		border: 1px solid white;
+		border-radius: 0.5rem;
+		background-color: rgb(236, 234, 234);
+		padding: 1rem;
+	p.top-text {
+		border-bottom: 1px solid @bckgrd;
+		padding-bottom: 1rem;
+		width: 98%;
+	}
+	p.bottom-text {
+		padding-bottom: 1rem;
+		width: 90%;
+	}
 }
 
-p.top-text {
-	border-bottom: 1px solid gray;
-	padding-bottom: 1rem;
-	width: 98%;
-}
-
-p.bottom-text {
-	padding-bottom: 1rem;
-	width: 90%;
-}
 
 .main-content button {
-	background: dodgerblue;
-	border: 1px solid rgb(233, 232, 232);
+	background: @color;
+	border: @width solid rgb(233, 232, 232);
 	border-radius: 5px;
-	background-color: rgb(160, 158, 158);
+	background-color: @bckgrd;
 	cursor: pointer;
 	padding: 1rem 1.5rem;
 	font-size: 20px;
 	text-align: center;
+	&:hover {
+		background-color: dodgerblue;
+		 color: white;
+	}
 }
 
-@media( max-width: 600px ) {
-	.main-content button {
-	  width: 75%;
-	  font-size: 2.5rem;
-	}
-  }
+
   
-  @media( max-width: 600px ) {
+  @media( max-width: 500px ) {
 	.main-content button {
-	  background: green;
-	  color: white;
+		width: 40%;
+		font-size: 1rem;
+		background: @bckgrd;
+		color: white;
+	&:hover {
+		background-color: @color;
+	  }
 	}
   }
 
-  .main-content button:hover {
-	background-color: dodgerblue;
-	  color: white;
-}
-
-@media(max-width: 600px) {
-	.middle-content .text-content h2 {
-		font-size: 30px;
-	}
-	
-	.middle-content {
-		display: flex;
-	}
-	
-	.text-content {
-		width: 55%;
-		padding: 1rem 1rem 1rem 0;
-	}
-	
-	.middle-content .text-content p {
-		width: 100%;
-	}
-	
-	.middle-content .text-content h2 {
-		font-size: 25px;
-	}
-}
-
-.middle-content .text-content h2 {
-	font-size: 30px;
-}
 
 .middle-content {
-	display: flex;
-}
+ 	display: flex;
+ }
 
-.text-content {
-	width: 55%;
-	padding: 1rem 1rem 1rem 0;
-}
+ .text-content {
+ 	width: 55%;
+ 	padding: 1rem 1rem 1rem 0;
+ }
 
-.middle-content .text-content p {
-	width: 100%;
-}
+ .middle-content .text-content p {
+ 	width: 100%;
+ }
 
 .middle-content .text-content h2 {
-	font-size: 25px;
-}
+ 	font-size: @font-size;
+ }
 
-@media(max-width:600px) {
+@media(max-width: 500px) {
 	.middle-content .text-content-bottom {
 		width: 50%;
 		float: left;
@@ -226,7 +201,7 @@ p.bottom-text {
 	
 	.middle-content .text-content-bottom p {
 		padding: 1rem;
-		border: 1px solid black;
+		border: @width solid black;
 	}
 	
 	.bottom-content h2 {
@@ -239,22 +214,21 @@ p.bottom-text {
 	width: 50%;
 	float: left;
 	padding: 1rem 0;
-}
-
-.middle-content .text-content-bottom h2 {
-	font-size: 25px;
-}
-
-.middle-content .text-content-bottom p {
+h2 {
+	font-size: @font-size;
+	}
+p {
 	padding: 1rem;
 	border: 1px solid black;
+	}
 }
+
 
 .bottom-content h2 {
-	font-size: 25px;
+	font-size: @font-size;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 500px) {
 	table {
 		font-family: arial, sans-serif;
 		border-collapse: collapse;
@@ -262,14 +236,15 @@ p.bottom-text {
 	  }
 	  
 	  td, th {
-		border: 1px solid none;
+		border: @width solid none;
 		text-align: left;
 		padding: 8px;
 	  }
 	  
 	  tr:nth-child(odd) {
-		background-color: #dddddd;
+		background-color: @bckgrd;
 	  }
+	  
 }
 
 
@@ -280,7 +255,7 @@ table {
   }
   
   td, th {
-	border: 1px solid none;
+	border: @width solid none;
 	text-align: left;
 	padding: 8px;
   }
@@ -292,7 +267,7 @@ table {
   footer {
 	  margin-top: 3rem;
 	  text-align: center;
-	  border: 1px solid black;
+	  border: @width solid black;
 	  background: black;
 	  color: white;
 	  padding: 2rem;
