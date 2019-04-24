@@ -191,3 +191,56 @@ p.bottom-text {
   background-color: dodgerblue;
   color: white;
 }
+.middle-content .text-content h2 {
+  font-size: 30px;
+}
+.middle-content {
+  display: flex;
+}
+.text-content {
+  width: 55%;
+  padding: 1rem 1rem 1rem 0;
+}
+.middle-content .text-content p {
+  width: 100%;
+}
+.middle-content .text-content h2 {
+  font-size: 25px;
+}
+.middle-content .text-content-bottom {
+  width: 50%;
+  float: left;
+  padding: 1rem 0;
+}
+.middle-content .text-content-bottom h2 {
+  font-size: 25px;
+}
+.middle-content .text-content-bottom p {
+  padding: 1rem;
+  border: 1px solid black;
+}
+.bottom-content h2 {
+  font-size: 25px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid none;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  border: 1px solid black;
+  background: black;
+  color: white;
+  padding: 2rem;
+}
