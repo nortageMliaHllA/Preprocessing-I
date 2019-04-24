@@ -1,1 +1,310 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+.padding {
+  padding: 1rem 0 1rem 2rem;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  width: 900px;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header a {
+  margin-left: 0;
+  padding: 1rem 0 1rem 2rem;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  header nav {
+    justify-content: center;
+  }
+  header nav a {
+    margin: 25px 0 25px 0;
+    padding: 1rem 0 1rem 2rem;
+    text-decoration: none;
+  }
+}
+.heading-img {
+  width: 45%;
+  margin: 5% 0 0 3%;
+}
+.main-content {
+  align-content: flex-end;
+  margin-left: 3%;
+}
+@media (max-width: 500px) {
+  .main-content {
+    width: 100%;
+  }
+}
+.overview .heading {
+  font-size: 50px;
+  align-content: flex-end;
+}
+.content {
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  background-color: #eceaea;
+  padding: 1rem;
+}
+.content p.top-text {
+  border-bottom: 1px solid #a09e9e;
+  padding-bottom: 1rem;
+  width: 98%;
+}
+.content p.bottom-text {
+  padding-bottom: 1rem;
+  width: 90%;
+}
+.main-content button {
+  background: dodgerblue;
+  border: 100% solid #e9e8e8;
+  border-radius: 5px;
+  background-color: #a09e9e;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  font-size: 20px;
+  text-align: center;
+}
+.main-content button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+@media (max-width: 500px) {
+  .main-content button {
+    width: 40%;
+    font-size: 1rem;
+    background: #a09e9e;
+    color: white;
+  }
+  .main-content button:hover {
+    background-color: dodgerblue;
+  }
+}
+.middle-content {
+  display: flex;
+}
+.text-content {
+  width: 55%;
+  padding: 1rem 1rem 1rem 0;
+}
+.middle-content .text-content p {
+  width: 100%;
+}
+.middle-content .text-content h2 {
+  font-size: 25px;
+}
+@media (max-width: 500px) {
+  .middle-content .text-content-bottom {
+    width: 50%;
+    float: left;
+    padding: 1rem 0;
+  }
+  .middle-content .text-content-bottom h2 {
+    font-size: 25px;
+  }
+  .middle-content .text-content-bottom p {
+    padding: 1rem;
+    border: 100% solid black;
+  }
+  .bottom-content h2 {
+    font-size: 25px;
+  }
+}
+.middle-content .text-content-bottom {
+  width: 50%;
+  float: left;
+  padding: 1rem 0;
+}
+.middle-content .text-content-bottom h2 {
+  font-size: 25px;
+}
+.middle-content .text-content-bottom p {
+  padding: 1rem;
+  border: 1px solid black;
+}
+.bottom-content h2 {
+  font-size: 25px;
+}
+@media (max-width: 500px) {
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td,
+  th {
+    border: 100% solid none;
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(odd) {
+    background-color: #a09e9e;
+  }
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 100% solid none;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  border: 100% solid black;
+  background: black;
+  color: white;
+  padding: 2rem;
+}
